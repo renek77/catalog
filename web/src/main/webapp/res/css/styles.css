@@ -1,0 +1,10 @@
+/* General */
+body, html, head {
+    background-color: #99dfe3;
+    height: 100%;
+    width: 100%;
+    text-align: justify;
+    font-family: Verdana, Arial, Helvetica, sans-serif;
+    font-size: 11px;
+    color: #fffee2;
+}
