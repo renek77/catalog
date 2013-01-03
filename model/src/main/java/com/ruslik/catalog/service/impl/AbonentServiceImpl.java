@@ -1,7 +1,8 @@
-package com.ruslik.catalog.model.impl;
+package com.ruslik.catalog.service.impl;
 
-import com.ruslik.catalog.model.AbonentDAO;
-import com.ruslik.catalog.model.AbonentService;
+import com.ruslik.catalog.dao.AbonentDAO;
+import com.ruslik.catalog.model.Abonent;
+import com.ruslik.catalog.service.AbonentService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;

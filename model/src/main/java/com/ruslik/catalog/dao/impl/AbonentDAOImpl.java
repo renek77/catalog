@@ -1,6 +1,7 @@
-package com.ruslik.catalog.model.impl;
+package com.ruslik.catalog.dao.impl;
 
-import com.ruslik.catalog.model.AbonentDAO;
+import com.ruslik.catalog.dao.AbonentDAO;
+import com.ruslik.catalog.model.Abonent;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Repository;
@@ -10,7 +11,7 @@ import java.util.List;
 /**
  * @author Ruslan
  */
-@Repository
+@Repository("abonentDAO")
 public class AbonentDAOImpl extends CommonDAOImpl implements AbonentDAO {
 
     private static final Logger LOG = LoggerFactory.getLogger(AbonentDAOImpl.class);

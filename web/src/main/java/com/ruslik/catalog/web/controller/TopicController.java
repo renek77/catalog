@@ -1,8 +1,8 @@
-package com.ruslik.catalog.web;
+package com.ruslik.catalog.web.controller;
 
-import com.ruslik.catalog.model.PhoneService;
-import com.ruslik.catalog.model.impl.Abonent;
-import com.ruslik.catalog.model.impl.Phone;
+import com.ruslik.catalog.model.Abonent;
+import com.ruslik.catalog.model.Phone;
+import com.ruslik.catalog.service.PhoneService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.validation.BindingResult;

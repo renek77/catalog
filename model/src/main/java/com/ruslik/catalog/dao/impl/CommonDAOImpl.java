@@ -1,6 +1,6 @@
-package com.ruslik.catalog.model.impl;
+package com.ruslik.catalog.dao.impl;
 
-import com.ruslik.catalog.model.CommonDAO;
+import com.ruslik.catalog.dao.CommonDAO;
 
 import javax.persistence.EntityManager;
 import javax.persistence.NoResultException;

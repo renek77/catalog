@@ -1,7 +1,8 @@
-package com.ruslik.catalog.model.impl;
+package com.ruslik.catalog.service.impl;
 
-import com.ruslik.catalog.model.PhoneDAO;
-import com.ruslik.catalog.model.PhoneService;
+import com.ruslik.catalog.dao.PhoneDAO;
+import com.ruslik.catalog.model.Phone;
+import com.ruslik.catalog.service.PhoneService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 import org.springframework.transaction.annotation.Transactional;

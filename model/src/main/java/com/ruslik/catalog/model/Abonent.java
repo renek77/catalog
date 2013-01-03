@@ -1,4 +1,4 @@
-package com.ruslik.catalog.model.impl;
+package com.ruslik.catalog.model;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;

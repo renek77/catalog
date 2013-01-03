@@ -1,6 +1,7 @@
-package com.ruslik.catalog.model.impl;
+package com.ruslik.catalog.dao.impl;
 
-import com.ruslik.catalog.model.PhoneDAO;
+import com.ruslik.catalog.dao.PhoneDAO;
+import com.ruslik.catalog.model.Phone;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Repository;

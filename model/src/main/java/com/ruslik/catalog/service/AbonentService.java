@@ -1,6 +1,6 @@
-package com.ruslik.catalog.model;
+package com.ruslik.catalog.service;
 
-import com.ruslik.catalog.model.impl.Abonent;
+import com.ruslik.catalog.model.Abonent;
 
 import java.util.List;
 

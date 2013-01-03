@@ -1,4 +1,4 @@
-package com.ruslik.catalog.web;
+package com.ruslik.catalog.web.controller;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;

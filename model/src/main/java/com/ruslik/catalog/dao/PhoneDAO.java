@@ -1,6 +1,6 @@
-package com.ruslik.catalog.model;
+package com.ruslik.catalog.dao;
 
-import com.ruslik.catalog.model.impl.Phone;
+import com.ruslik.catalog.model.Phone;
 
 import java.util.List;
 

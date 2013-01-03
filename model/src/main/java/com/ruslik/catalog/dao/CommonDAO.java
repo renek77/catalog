@@ -1,4 +1,4 @@
-package com.ruslik.catalog.model;
+package com.ruslik.catalog.dao;
 
 /**
  * @author Paul Jakimov
