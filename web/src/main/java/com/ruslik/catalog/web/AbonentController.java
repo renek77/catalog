@@ -32,7 +32,7 @@ public class AbonentController {
     public String listAbonent(Map<String, Object> map) {
         map.put("Abonent", new Abonent());
         map.put("Abonentlist", abonentService.listAbonent());
-        return "Abonent_list";
+        return "abonent_list";
     }
 
     @RequestMapping(value = "/Abonent/add", method = RequestMethod.POST)
