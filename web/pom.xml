@@ -89,17 +89,6 @@
 
     <build>
         <plugins>
-            <plugin>
-                <groupId>org.apache.maven.plugins</groupId>
-                <artifactId>maven-surefire-plugin</artifactId>
-                <configuration>
-                    <systemPropertyVariables>
-                        <!-- Specific log4j config for tests -->
-                        <log4j.configuration>test-log4j.properties</log4j.configuration>
-                    </systemPropertyVariables>
-                </configuration>
-            </plugin>
-
             <!--Building default war-->
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
