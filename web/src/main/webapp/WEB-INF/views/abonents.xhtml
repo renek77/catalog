@@ -17,10 +17,10 @@
 </h:head>
 
 <h:body>
-    Place your content here
+
     <f:view>
         <h1><h:outputText value="Abonents list"/></h1>
-        <h:dataTable value="#{showAbonentBean.abonent}" var="rowAbonent"
+        <h:dataTable value="#{showAbonentBean.getAbonent}" var="rowAbonent"
                      border="1" headerClass="Heading"
                      rowClasses="RowOdd,RowEven">
             <h:column>
@@ -33,7 +33,7 @@
                 <f:facet name="header">
                     <f:verbatim>adress</f:verbatim>
                 </f:facet>
-                <h:outputText value="#{rowAbonent.fio}"/>
+                <h:outputText value="#{rowAbonent.adress}"/>
             </h:column>
 
         </h:dataTable>
