@@ -22,7 +22,7 @@ public class ShowAbonentBean {
         return abonentService;
     }
 
-    public List getRooms() {
+    public List getAbonent() {
         return this.getAbonentService().listAbonent();
 
     }
