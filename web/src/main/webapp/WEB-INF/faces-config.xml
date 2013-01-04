@@ -7,4 +7,9 @@
     <application>
         <variable-resolver>org.springframework.web.jsf.DelegatingVariableResolver</variable-resolver>
     </application>
+    <managed-bean>
+        <managed-bean-name>showAbonent</managed-bean-name>
+        <managed-bean-class>com.ruslik.catalog.web.ShowAbonentBean</managed-bean-class>
+        <managed-bean-scope>request</managed-bean-scope>
+    </managed-bean>
 </faces-config>
