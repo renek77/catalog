@@ -12,7 +12,7 @@
 
 <h2><spring:message code="label.title"/></h2>
 
-<form:form method="post" action="/Abonent/add" commandName="Abonent">
+<form:form method="post" action="Abonent/add" commandName="Abonent">
     <table>
         <tr>
             <td><form:label path="abonent_fio">
@@ -44,7 +44,7 @@
         </tr>
         <c:forEach items="${Abonentlist}" var="Abonent">
             <tr>
-                <td>${Abonent.abonent_fio}</td>
+                <td><a href="phone/${Abonent.id}">${Abonent.abonent_fio}</a></td>
                 <td>${Abonent.abonent_adress}</td>
                 <td><a href="Abonent/delete/${Abonent.id}"><spring:message code="label.delete"/></a></td>
             </tr>

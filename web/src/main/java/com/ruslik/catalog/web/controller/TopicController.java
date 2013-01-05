@@ -18,30 +18,26 @@ public class TopicController {
     @Autowired
     private PhoneService phoneService;
 
-    @RequestMapping("/index")
+    @RequestMapping("phone/{idAbonent}")
     public String listPhones(Map<String, Object> map) {
         map.put("Phone", new Phone());
         map.put("PhoneList", phoneService.listPhone());
-        return "/Phone";
+        return "/abonent_list";
     }
 
-    @RequestMapping("/")
-    public String home() {
-        return "redirect:/index";
-    }
 
-    @RequestMapping(value = "/add", method = RequestMethod.POST)
+    @RequestMapping(value = "/phone/add/{idAbonent}", method = RequestMethod.POST)
     public String addPhone(@ModelAttribute("Phone") Phone phone, @ModelAttribute("Abonent") Abonent Abonent, BindingResult result) {
         Date currentDate = new Date();
 //        phone.setDatecreation(currentDate);
 //        phone.setCreator(Abonent);
         phoneService.addPhone(phone);
-        return "redirect:/index";
+        return "redirect:/phone/{idAbonent}";
     }
 
     @RequestMapping("/delete/{idPhone}")
     public String deletePhone(@PathVariable("idPhone") Long idPhone) {
         phoneService.removePhone(idPhone);
-        return "redirect:/index";
+        return "redirect:/phone/{idAbonent}";
     }
 }

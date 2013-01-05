@@ -19,22 +19,27 @@ public class AbonentController {
     private AbonentService abonentService;
     private Abonent abonent;
 
-    @RequestMapping("/Abonent/index")
+    @RequestMapping("/index")
     public String listAbonent(Map<String, Object> map) {
         map.put("Abonent", new Abonent());
         map.put("Abonentlist", abonentService.listAbonent());
         return "abonent_list";
     }
 
-    @RequestMapping(value = "/Abonent/add", method = RequestMethod.POST)
+    @RequestMapping("/")
+    public String home() {
+        return "redirect:/index";
+    }
+
+    @RequestMapping(value = "Abonent/add", method = RequestMethod.POST)
     public String addAbonent(@ModelAttribute("Abonent") Abonent abonent, BindingResult result) {
         abonentService.addUser(abonent);
-        return "redirect:/Abonent/index";
+        return "redirect:/index";
     }
 
     @RequestMapping("/Abonent/delete/{idAbonent}")
     public String deleteAbonent(@PathVariable("idAbonent") Long idAbonent) {
         abonentService.removeUser(idAbonent);
-        return "redirect:/Abonent/index";
+        return "redirect:/index";
     }
 }
