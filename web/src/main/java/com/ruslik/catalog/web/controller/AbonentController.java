@@ -12,15 +12,6 @@ import org.springframework.web.bind.annotation.RequestMethod;
 
 import java.util.Map;
 
-//error
-
-/**
- * Created by IntelliJ IDEA.
- * User: ruslan
- * Date: 18.05.12
- * Time: 14:16
- * To change this template use File | Settings | File Templates.
- */ ////
 @Controller
 public class AbonentController {
 

@@ -9,9 +9,6 @@ import org.springframework.transaction.annotation.Transactional;
 
 import java.util.List;
 
-/**
- * @author Ruslan
- */
 @Service
 public class AbonentServiceImpl implements AbonentService {
 

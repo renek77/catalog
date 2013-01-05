@@ -6,7 +6,7 @@ import java.util.List;
 
 public interface AbonentService {
 
-    void addUser(Abonent Abonent);
+    void addUser(Abonent abonent);
 
     void removeUser(Long id);
 

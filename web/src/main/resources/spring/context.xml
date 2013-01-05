@@ -23,6 +23,7 @@
         <property name="basename" value="/WEB-INF/messages/messages"/>
         <property name="cacheSeconds" value="120"/>
     </bean>
+
 </beans>
 
 
