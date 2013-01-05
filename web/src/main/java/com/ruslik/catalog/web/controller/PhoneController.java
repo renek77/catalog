@@ -13,7 +13,7 @@ import javax.annotation.Resource;
 
 @Controller
 @RequestMapping(value = "/phone")
-@SessionAttributes({"phone", "abonentId"})
+@SessionAttributes({"phone"})
 public class PhoneController {
 
     @Resource
