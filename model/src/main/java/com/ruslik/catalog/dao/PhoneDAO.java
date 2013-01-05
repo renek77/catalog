@@ -9,7 +9,9 @@ import java.util.List;
  */
 public interface PhoneDAO extends CommonDAO {
 
-    List<Phone> listPhone();
+    List<Phone> listAllPhones();
 
     Phone getPhoneById(Long id);
+
+    List<Phone> findByAbonentId(Long abonentId);
 }

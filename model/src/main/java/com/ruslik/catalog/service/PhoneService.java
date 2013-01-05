@@ -20,4 +20,6 @@ public interface PhoneService {
     void removePhone(Long id);
 
     List<Phone> listPhone();
+
+    List<Phone> getAbonentPhones(Long abonentId);
 }

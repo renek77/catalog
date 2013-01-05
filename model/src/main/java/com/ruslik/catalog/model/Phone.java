@@ -10,17 +10,25 @@ import javax.persistence.*;
 public class Phone extends ManagedEntity {
 
     @Column(name = "PHONE_NUMBER")
-    private String phone_number;
+    private String number;
 
     @ManyToOne
     @JoinColumn(name = "OWNER")
     private Abonent owner;
 
-    public String getPhone_number() {
-        return phone_number;
+    public String getNumber() {
+        return number;
     }
 
-    public void setPhone_number(String phone_number) {
-        this.phone_number = phone_number;
+    public void setNumber(String number) {
+        this.number = number;
+    }
+
+    public Abonent getOwner() {
+        return owner;
+    }
+
+    public void setOwner(Abonent owner) {
+        this.owner = owner;
     }
 }

@@ -29,4 +29,9 @@ public class AbonentServiceImpl implements AbonentService {
     public List<Abonent> listAbonent() {
         return abonentDAO.listAbonent();
     }
+
+    @Override
+    public Abonent findById(Long id) {
+        return abonentDAO.find(Abonent.class, id);
+    }
 }

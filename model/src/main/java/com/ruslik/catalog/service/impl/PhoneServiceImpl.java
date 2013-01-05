@@ -4,7 +4,7 @@ import com.ruslik.catalog.dao.PhoneDAO;
 import com.ruslik.catalog.model.Phone;
 import com.ruslik.catalog.service.PhoneService;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Component;
+import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
 import java.util.List;
@@ -12,30 +12,35 @@ import java.util.List;
 /**
  * @author Ruslan
  */
-@Component
+@Service("phoneService")
 public class PhoneServiceImpl implements PhoneService {
 
     @Autowired
-    private PhoneDAO PhoneDAO;
+    private PhoneDAO phoneDAO;
 
     @Transactional
     public void addPhone(Phone phone) {
-        PhoneDAO.persist(phone);
+        phoneDAO.persist(phone);
     }
 
     @Transactional
     public Phone getPhoneById(Long id) {
         System.out.println("PhoneService is running.... id = " + id);
-        return PhoneDAO.getPhoneById(id);
+        return phoneDAO.getPhoneById(id);
     }
 
     @Transactional
     public void removePhone(Long id) {
-        PhoneDAO.remove(Phone.class, id);
+        phoneDAO.remove(Phone.class, id);
     }
 
     @Transactional(readOnly = true)
     public List<Phone> listPhone() {
-        return PhoneDAO.listPhone();
+        return phoneDAO.listAllPhones();
+    }
+
+    @Override
+    public List<Phone> getAbonentPhones(Long abonentId) {
+        return phoneDAO.listAllPhones();
     }
 }

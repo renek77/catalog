@@ -8,3 +8,7 @@ body, html, head {
     font-size: 11px;
     color: #fffee2;
 }
+
+.data td {
+    padding: 2 20 2;
+}
