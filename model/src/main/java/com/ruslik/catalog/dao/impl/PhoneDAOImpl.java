@@ -22,14 +22,6 @@ public class PhoneDAOImpl extends CommonDAOImpl implements PhoneDAO {
         return getEm().createQuery("from Phone").getResultList();
     }
 
-    public Phone getPhoneById(Long id) {
-        //LOG.debug("selecting Phone by id =", id);
-        System.out.println("phonedaoimpl is running, id = " + id);
-        Phone phone = (Phone) getEm().createQuery("from Phone where id =:id ").setParameter("id", id).getSingleResult();
-        System.out.println("result daoimpl is phone = " + phone.getNumber());
-        return phone;
-    }
-
     @Override
     public List<Phone> findByAbonentId(Long abonentId) {
         Query query = getEm()

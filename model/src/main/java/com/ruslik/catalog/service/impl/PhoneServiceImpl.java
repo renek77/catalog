@@ -25,8 +25,7 @@ public class PhoneServiceImpl implements PhoneService {
 
     @Transactional
     public Phone getPhoneById(Long id) {
-        System.out.println("PhoneService is running.... id = " + id);
-        return phoneDAO.getPhoneById(id);
+        return phoneDAO.find(Phone.class, id);
     }
 
     @Transactional
