@@ -41,6 +41,6 @@ public class PhoneServiceImpl implements PhoneService {
 
     @Override
     public List<Phone> getAbonentPhones(Long abonentId) {
-        return phoneDAO.listAllPhones();
+        return phoneDAO.findByAbonentId(abonentId);
     }
 }

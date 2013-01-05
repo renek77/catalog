@@ -38,8 +38,8 @@
                 <!--Then, we can use the query.setHint("org.hibernate.cacheable", true) method on any query we wish to cache.-->
                 <entry key="hibernate.cache.use_query_cache" value="false"/>
 
-                <entry key="hibernate.show_sql" value="true"/>
-                <entry key="hibernate.format_sql" value="true"/>
+                <entry key="hibernate.show_sql" value="false"/>
+                <entry key="hibernate.format_sql" value="false"/>
                 <entry key="hibernate.use_sql_comments" value="false"/>
             </map>
         </property>

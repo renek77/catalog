@@ -10,7 +10,7 @@
 </head>
 <body>
 <%--<t:header></t:header>--%>
-<form:form method="post" action="add" commandName="phone">
+<form:form method="post" action="phones/add" commandName="phone">
     <fieldset title="<spring:message code="label.subscriber.add"/>" style="width: 350px;">
         <legend><spring:message code="label.subscriber.add"/></legend>
         <table class="data">
@@ -43,9 +43,9 @@
         </tr>
         <c:forEach items="${phoneList}" var="phone">
             <tr>
-                <td><a href="topic/${phone.id}">${phone.number}</a></td>
+                <td>${phone.number}</td>
                 <td>${phone.owner.lastName} ${phone.owner.lastName}</td>
-                <td><a href="delete/${phone.id}"><spring:message code="label.delete"/></a></td>
+                <td><a href="phones/delete/${phone.id}"><spring:message code="label.delete"/></a></td>
             </tr>
         </c:forEach>
     </table>

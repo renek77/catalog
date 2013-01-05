@@ -32,7 +32,9 @@ public class PhoneDAOImpl extends CommonDAOImpl implements PhoneDAO {
 
     @Override
     public List<Phone> findByAbonentId(Long abonentId) {
-        Query query = getEm().createQuery("from Phone where owner.id =:id ");
+        Query query = getEm()
+                .createQuery("from Phone where owner.id =:abonentId")
+                .setParameter("abonentId", abonentId);
         return query.getResultList();
     }
 }
