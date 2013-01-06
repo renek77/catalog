@@ -9,7 +9,7 @@
     <link rel="stylesheet" type="text/css" href="<c:url value="/res/css/styles.css"/>"/>
 </head>
 <body>
-<%--<t:header></t:header>--%>
+<t:header></t:header>
 <form:form method="post" action="phones/add" commandName="phone">
     <fieldset title="<spring:message code="label.subscriber.add"/>" style="width: 350px;">
         <legend><spring:message code="label.subscriber.add"/></legend>
@@ -44,7 +44,7 @@
         <c:forEach items="${phoneList}" var="phone">
             <tr>
                 <td>${phone.number}</td>
-                <td>${phone.owner.lastName} ${phone.owner.lastName}</td>
+                <td>${phone.owner.firstName} ${phone.owner.lastName}</td>
                 <td><a href="phones/delete/${phone.id}"><spring:message code="label.delete"/></a></td>
             </tr>
         </c:forEach>
