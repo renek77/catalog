@@ -20,4 +20,12 @@ public class AbonentDAOImpl extends CommonDAOImpl implements AbonentDAO {
         return getEm().createQuery("from Abonent").getResultList();
     }
 
+
+    public void storeAbonent(Abonent abonent) {
+
+        Abonent merged = this.getEm().merge(abonent);
+        this.getEm().flush();
+        abonent.setId(merged.getId());
+    }
+
 }

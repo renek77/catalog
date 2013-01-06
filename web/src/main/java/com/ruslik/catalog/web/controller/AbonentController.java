@@ -6,7 +6,9 @@ import com.ruslik.catalog.service.PhoneService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
+import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.*;
+import org.springframework.web.bind.support.SessionStatus;
 
 @Controller
 @RequestMapping(value = "/abonent")
@@ -52,7 +54,7 @@ public String updateAbonent(@ModelAttribute("abonent") Abonent abonent) {
     abonentService.persist(abonent);
     return "redirect:/abonent";
 }    */
-    @RequestMapping("update/{abonentId}/{abonentfirstName}")
+    /*@RequestMapping("update/{abonentId}/{abonentfirstName}")
     public String updateAbonent(@PathVariable("abonentId") Long id, @PathVariable("abonentfirstName") String firstName) {
         //abonentService.refresh(abonent);
         Abonent abonent;
@@ -61,4 +63,15 @@ public String updateAbonent(@ModelAttribute("abonent") Abonent abonent) {
         // abonentService.persist(abonent);
         return "redirect:/";
     }
+          */
+    @RequestMapping("update/{abonentId}/{abonentfirstName}")
+    public String processSubmit(
+            @ModelAttribute("abonent") Abonent abonent,
+            BindingResult result, SessionStatus status) {
+        abonentService.storeAbonent(abonent);
+        status.setComplete();
+        //form success
+        return "redirect:/";
+    }
 }
+

@@ -14,5 +14,5 @@ public interface AbonentService {
 
     Abonent findById(Long id);
 
-    void persist(Object entity);
+    public void storeAbonent(Abonent abonent);
 }

@@ -36,7 +36,7 @@ public class AbonentServiceImpl implements AbonentService {
     }
 
     @Transactional
-    public void persist(Object entity) {
-        abonentDAO.persist(entity);
+    public void storeAbonent(Abonent abonent) {
+        abonentDAO.storeAbonent(abonent);
     }
 }
