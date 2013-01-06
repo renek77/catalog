@@ -19,4 +19,5 @@ public class AbonentDAOImpl extends CommonDAOImpl implements AbonentDAO {
     public List<Abonent> listAbonent() {
         return getEm().createQuery("from Abonent").getResultList();
     }
+
 }

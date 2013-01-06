@@ -22,4 +22,6 @@ public interface PhoneService {
     List<Phone> listPhone();
 
     List<Phone> getAbonentPhones(Long abonentId);
+
+    void deleteAbonentPhones(Long abonentId);
 }

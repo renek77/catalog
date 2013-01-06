@@ -12,4 +12,5 @@ public interface PhoneDAO extends CommonDAO {
     List<Phone> listAllPhones();
 
     List<Phone> findByAbonentId(Long abonentId);
+
 }

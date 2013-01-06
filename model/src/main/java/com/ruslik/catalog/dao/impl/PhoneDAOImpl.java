@@ -29,4 +29,5 @@ public class PhoneDAOImpl extends CommonDAOImpl implements PhoneDAO {
                 .setParameter("abonentId", abonentId);
         return query.getResultList();
     }
+
 }

@@ -9,10 +9,11 @@
     <link rel="stylesheet" type="text/css" href="<c:url value="/res/css/styles.css"/>"/>
 </head>
 <body>
+<t:header></t:header>
 
 <h2><spring:message code="label.title"/></h2>
 
-<form:form method="post" action="add" commandName="abonent">
+<form:form method="post" action="abonent/add" commandName="abonent">
     <fieldset title="<spring:message code="label.subscriber.add"/>" style="width: 350px;">
         <legend><spring:message code="label.subscriber.add"/></legend>
         <table>

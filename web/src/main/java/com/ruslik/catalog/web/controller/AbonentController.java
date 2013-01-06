@@ -2,6 +2,7 @@ package com.ruslik.catalog.web.controller;
 
 import com.ruslik.catalog.model.Abonent;
 import com.ruslik.catalog.service.AbonentService;
+import com.ruslik.catalog.service.PhoneService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -14,6 +15,9 @@ public class AbonentController {
 
     @Autowired
     private AbonentService abonentService;
+
+    @Autowired
+    private PhoneService phoneService;
 
     @RequestMapping({"", "/"})
     public String listAbonent(Model model) {
@@ -30,6 +34,7 @@ public class AbonentController {
 
     @RequestMapping("delete/{abonentId}")
     public String deleteAbonent(@PathVariable("abonentId") Long abonentId) {
+        phoneService.deleteAbonentPhones(abonentId);
         abonentService.removeUser(abonentId);
         return "redirect:/abonent";
     }

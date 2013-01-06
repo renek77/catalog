@@ -42,4 +42,14 @@ public class PhoneServiceImpl implements PhoneService {
     public List<Phone> getAbonentPhones(Long abonentId) {
         return phoneDAO.findByAbonentId(abonentId);
     }
+
+    @Transactional
+    public void deleteAbonentPhones(Long abonentId) {
+        List<Phone> phoneList = phoneDAO.findByAbonentId(abonentId);
+        for (Phone ob : phoneList) {
+            ob.setOwner(null);
+            System.out.print(ob.getClass());
+            phoneDAO.remove(ob);
+        }
+    }
 }
