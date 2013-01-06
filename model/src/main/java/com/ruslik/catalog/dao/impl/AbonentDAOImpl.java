@@ -22,7 +22,7 @@ public class AbonentDAOImpl extends CommonDAOImpl implements AbonentDAO {
 
 
     public void storeAbonent(Abonent abonent) {
-        //update
+        //update --
         Abonent merged = this.getEm().merge(abonent);
         this.getEm().flush();
         abonent.setId(merged.getId());
