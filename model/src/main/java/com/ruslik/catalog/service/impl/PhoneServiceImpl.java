@@ -48,7 +48,6 @@ public class PhoneServiceImpl implements PhoneService {
         List<Phone> phoneList = phoneDAO.findByAbonentId(abonentId);
         for (Phone ob : phoneList) {
             ob.setOwner(null);
-            System.out.print(ob.getClass());
             phoneDAO.remove(ob);
         }
     }
