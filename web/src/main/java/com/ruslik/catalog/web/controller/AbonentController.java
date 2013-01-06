@@ -45,10 +45,20 @@ public class AbonentController {
         return "abonent_edit";
     }
 
-    @RequestMapping(value = "update/{abonentId}", method = RequestMethod.GET)
-    public String updateAbonent(@ModelAttribute("abonent") Abonent abonent) {
-        abonentService.refresh(abonent);
-        return "redirect:/abonent";
+    /* @RequestMapping("update/{abonentId}")
+public String updateAbonent(@ModelAttribute("abonent") Abonent abonent) {
+    //abonentService.refresh(abonent);
+    abonent.setFirstName("pupkin");
+    abonentService.persist(abonent);
+    return "redirect:/abonent";
+}    */
+    @RequestMapping("update/{abonentId}/{abonentfirstName}")
+    public String updateAbonent(@PathVariable("abonentId") Long id, @PathVariable("abonentfirstName") String firstName) {
+        //abonentService.refresh(abonent);
+        Abonent abonent;
+        abonent = abonentService.findById(id);
+        abonent.setFirstName(firstName);
+        // abonentService.persist(abonent);
+        return "redirect:/";
     }
-
 }

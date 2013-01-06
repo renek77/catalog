@@ -35,7 +35,8 @@ public class AbonentServiceImpl implements AbonentService {
         return abonentDAO.find(Abonent.class, id);
     }
 
-    public void refresh(Object entity) {
-        abonentDAO.refresh(entity);
+    @Transactional
+    public void persist(Object entity) {
+        abonentDAO.persist(entity);
     }
 }

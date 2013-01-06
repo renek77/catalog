@@ -13,7 +13,7 @@
 
 <h2><spring:message code="label.title"/></h2>
 
-<form:form method="post" action="abonent/update/${abonent.id}" commandName="abonent">
+<form:form method="get" action="/abonent/update/${abonent.id}/${abonent.firstName}" commandName="abonent">
     <fieldset title="<spring:message code="label.subscriber.edit"/>" style="width: 350px;">
         <legend><spring:message code="label.subscriber.edit"/></legend>
         <table>
