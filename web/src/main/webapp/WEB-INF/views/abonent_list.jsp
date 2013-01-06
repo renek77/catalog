@@ -13,36 +13,71 @@
 
 <h2><spring:message code="label.title"/></h2>
 
-<form:form method="post" action="abonent/add" commandName="abonent">
-    <fieldset title="<spring:message code="label.subscriber.add"/>" style="width: 350px;">
-        <legend><spring:message code="label.subscriber.add"/></legend>
-        <table>
-            <tr>
-                <td><form:label path="firstName">
-                    <spring:message code="label.subscriber.firstName"/>
-                </form:label></td>
-                <td><form:input path="firstName"/></td>
-            </tr>
-            <tr>
-                <td><form:label path="lastName">
-                    <spring:message code="label.subscriber.lastName"/>
-                </form:label></td>
-                <td><form:input path="lastName"/></td>
-            </tr>
-            <tr>
-                <td><form:label path="address">
-                    <spring:message code="label.subscriber.address"/>
-                </form:label></td>
-                <td><form:input path="address"/></td>
-            </tr>
-            <tr>
-                <td colspan="2">
-                    <input type="submit" value="<spring:message code="label.add"/>"/>
-                </td>
-            </tr>
-        </table>
-    </fieldset>
-</form:form>
+<c:if test="${!empty abonent}">
+    <form:form method="post" action="abonent/add" commandName="abonent">
+        <fieldset title="<spring:message code="label.subscriber.add"/>" style="width: 350px;">
+            <legend><spring:message code="label.subscriber.add"/></legend>
+            <table>
+                <tr>
+                    <td><form:label path="firstName">
+                        <spring:message code="label.subscriber.firstName"/>
+                    </form:label></td>
+                    <td><form:input path="firstName"/>${abonent.firstName}</td>
+                </tr>
+                <tr>
+                    <td><form:label path="lastName">
+                        <spring:message code="label.subscriber.lastName"/>
+                    </form:label></td>
+                    <td><form:input path="lastName"/>${abonent.lastName}</td>
+                </tr>
+                <tr>
+                    <td><form:label path="address">
+                        <spring:message code="label.subscriber.address"/>
+                    </form:label></td>
+                    <td><form:input path="address"/>${abonent.address}</td>
+                </tr>
+                <tr>
+                    <td colspan="2">
+                        <input type="submit" value="<spring:message code="label.add"/>"/>
+                    </td>
+                </tr>
+            </table>
+        </fieldset>
+    </form:form>
+</c:if>
+
+<c:if test="${empty abonent}">
+    <form:form method="post" action="abonent/add" commandName="abonent">
+        <fieldset title="<spring:message code="label.subscriber.add"/>" style="width: 350px;">
+            <legend><spring:message code="label.subscriber.add"/></legend>
+            <table>
+                <tr>
+                    <td><form:label path="firstName">
+                        <spring:message code="label.subscriber.firstName"/>
+                    </form:label></td>
+                    <td><form:input path="firstName"/></td>
+                </tr>
+                <tr>
+                    <td><form:label path="lastName">
+                        <spring:message code="label.subscriber.lastName"/>
+                    </form:label></td>
+                    <td><form:input path="lastName"/></td>
+                </tr>
+                <tr>
+                    <td><form:label path="address">
+                        <spring:message code="label.subscriber.address"/>
+                    </form:label></td>
+                    <td><form:input path="address"/></td>
+                </tr>
+                <tr>
+                    <td colspan="2">
+                        <input type="submit" value="<spring:message code="label.add"/>"/>
+                    </td>
+                </tr>
+            </table>
+        </fieldset>
+    </form:form>
+</c:if>
 
 <h3><spring:message code="label.Abonent"/></h3>
 <c:if test="${!empty abonentlist}">
