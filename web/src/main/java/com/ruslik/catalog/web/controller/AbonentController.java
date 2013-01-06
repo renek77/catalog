@@ -40,10 +40,8 @@ public class AbonentController {
     }
 
     @RequestMapping("edit/{abonentId}")
-    public String editAbonent(@PathVariable("abonentId") Long abonentId, @ModelAttribute("abonent") Abonent abonent) {
-        //  phoneService.deleteAbonentPhones(abonentId);
-        //  abonentService.removeUser(abonentId);
-        abonent = abonentService.findById(abonentId);
-        return "redirect:/abonent";
+    public String editAbonent(@PathVariable("abonentId") Long abonentId, Model model) {
+        model.addAttribute("abonent", abonentService.findById(abonentId));
+        return "abonent_edit";
     }
 }
