@@ -38,4 +38,11 @@ public class AbonentController {
         abonentService.removeUser(abonentId);
         return "redirect:/abonent";
     }
+
+    @RequestMapping("edit/{abonentId}")
+    public String editAbonent(@PathVariable("abonentId") Long abonentId) {
+        //  phoneService.deleteAbonentPhones(abonentId);
+        //  abonentService.removeUser(abonentId);
+        return "redirect:/abonent";
+    }
 }

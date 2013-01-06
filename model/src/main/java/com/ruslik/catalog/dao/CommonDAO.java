@@ -1,8 +1,5 @@
 package com.ruslik.catalog.dao;
 
-/**
- * @author Paul Jakimov
- */
 public interface CommonDAO {
 
     void persist(Object obj);

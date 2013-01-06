@@ -58,6 +58,7 @@
                 <td><a href="abonent/${abonent.id}/phones">${abonent.firstName} ${abonent.lastName}</a></td>
                 <td>${abonent.address}</td>
                 <td><a href="abonent/delete/${abonent.id}"><spring:message code="label.delete"/></a></td>
+                <td><a href="abonent/edit/${abonent.id}"><spring:message code="label.edit"/></a></td>
             </tr>
         </c:forEach>
     </table>
