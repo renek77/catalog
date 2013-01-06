@@ -13,4 +13,6 @@ public interface AbonentService {
     List<Abonent> listAbonent();
 
     Abonent findById(Long id);
+
+    void refresh(Object entity);
 }

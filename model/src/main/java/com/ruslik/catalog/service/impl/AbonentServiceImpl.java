@@ -34,4 +34,8 @@ public class AbonentServiceImpl implements AbonentService {
     public Abonent findById(Long id) {
         return abonentDAO.find(Abonent.class, id);
     }
+
+    public void refresh(Object entity) {
+        abonentDAO.refresh(entity);
+    }
 }

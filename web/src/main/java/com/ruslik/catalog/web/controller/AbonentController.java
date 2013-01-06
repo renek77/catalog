@@ -44,4 +44,11 @@ public class AbonentController {
         model.addAttribute("abonent", abonentService.findById(abonentId));
         return "abonent_edit";
     }
+
+    @RequestMapping(value = "update/{abonentId}", method = RequestMethod.GET)
+    public String updateAbonent(@ModelAttribute("abonent") Abonent abonent) {
+        abonentService.refresh(abonent);
+        return "redirect:/abonent";
+    }
+
 }
